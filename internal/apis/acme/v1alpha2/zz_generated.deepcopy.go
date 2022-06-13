@@ -200,9 +200,9 @@ func (in *ACMEChallengeSolverHTTP01GatewayHTTPRoute) DeepCopyInto(out *ACMEChall
 			(*out)[key] = val
 		}
 	}
-	if in.ParentRefs != nil {
-		in, out := &in.ParentRefs, &out.ParentRefs
-		*out = make([]apisv1alpha2.ParentRef, len(*in))
+	if in.ParentReferences != nil {
+		in, out := &in.ParentReferences, &out.ParentReferences
+		*out = make([]apisv1alpha2.ParentReference, len(*in))
 		for i := range *in {
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}

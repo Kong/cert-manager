@@ -150,7 +150,7 @@ func (s *Solver) checkAndUpdateGatewayHTTPRoute(ctx context.Context, ch *cmacme.
 func generateHTTPRouteSpec(ch *cmacme.Challenge, svcName string) gwapi.HTTPRouteSpec {
 	return gwapi.HTTPRouteSpec{
 		CommonRouteSpec: gwapi.CommonRouteSpec{
-			ParentRefs: ch.Spec.Solver.HTTP01.GatewayHTTPRoute.ParentRefs,
+			ParentReferences: ch.Spec.Solver.HTTP01.GatewayHTTPRoute.ParentReferences,
 		},
 		Hostnames: []gwapi.Hostname{
 			gwapi.Hostname(ch.Spec.DNSName),

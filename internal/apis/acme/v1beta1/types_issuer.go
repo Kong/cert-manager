@@ -257,10 +257,10 @@ type ACMEChallengeSolverHTTP01GatewayHTTPRoute struct {
 	Labels map[string]string `json:"labels,omitempty"`
 
 	// When solving an HTTP-01 challenge, cert-manager creates an HTTPRoute.
-	// cert-manager needs to know which parentRefs should be used when creating
-	// the HTTPRoute. Usually, the parentRef references a Gateway. See:
+	// cert-manager needs to know which parentReferences should be used when creating
+	// the HTTPRoute. Usually, the parentReference references a Gateway. See:
 	// https://gateway-api.sigs.k8s.io/v1alpha2/api-types/httproute/#attaching-to-gateways
-	ParentRefs []gwapi.ParentRef `json:"parentRefs,omitempty"`
+	ParentReferences []gwapi.ParentReference `json:"parentReferences,omitempty"`
 }
 
 type ACMEChallengeSolverHTTP01IngressPodTemplate struct {

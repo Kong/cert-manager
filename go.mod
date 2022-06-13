@@ -54,7 +54,7 @@ require (
 	k8s.io/utils v0.0.0-20211116205334-6203023598ed
 	sigs.k8s.io/controller-runtime v0.11.1
 	sigs.k8s.io/controller-tools v0.7.0
-	sigs.k8s.io/gateway-api v0.4.1
+	sigs.k8s.io/gateway-api v0.0.0-20220419161317-56fe9b6f3d84
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.1
 	sigs.k8s.io/yaml v1.3.0
 	software.sslmate.com/src/go-pkcs12 v0.0.0-20210415151418-c5206de65a78

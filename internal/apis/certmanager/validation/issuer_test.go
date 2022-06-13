@@ -245,7 +245,7 @@ func TestValidateACMEIssuerConfig(t *testing.T) {
 					{
 						HTTP01: &cmacme.ACMEChallengeSolverHTTP01{
 							GatewayHTTPRoute: &cmacme.ACMEChallengeSolverHTTP01GatewayHTTPRoute{
-								ParentRefs: []gwapi.ParentRef{
+								ParentReferences: []gwapi.ParentReference{
 									{
 										Name: "blah",
 									},
@@ -271,8 +271,8 @@ func TestValidateACMEIssuerConfig(t *testing.T) {
 			},
 			errs: []*field.Error{
 				field.Required(
-					fldPath.Child("solvers").Index(0).Child("http01", "gateway").Child("parentRefs"),
-					"at least 1 parentRef is required",
+					fldPath.Child("solvers").Index(0).Child("http01", "gateway").Child("parentReferences"),
+					"at least 1 parentReference is required",
 				),
 			},
 		},
@@ -289,7 +289,7 @@ func TestValidateACMEIssuerConfig(t *testing.T) {
 								Labels: map[string]string{
 									"a": "b",
 								},
-								ParentRefs: []gwapi.ParentRef{
+								ParentReferences: []gwapi.ParentReference{
 									{
 										Name: "blah",
 									},
